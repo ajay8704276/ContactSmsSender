@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="@dimen/activity_horizontal_margin"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_weight=".5"
+            android:text="Compose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:padding="@dimen/activity_horizontal_margin"
+            android:id="@+id/txt_message"
+            android:layout_weight="2.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="Send Message"
+        android:id="@+id/send_compose_message_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
