@@ -18,6 +18,7 @@ import com.app.kisan.network.demo.Utils.PhoneNumberValidator;
 import com.app.kisan.network.demo.Utils.RandomNumberGenerator;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -84,7 +85,19 @@ public class SendMessageActivity extends AppCompatActivity {
                     mMessageText = mComposeTxtView.getText().toString();
                     if (mMessageText != null) {
                         // initialise twillio
-                        sendMessage(mMessageText);
+
+                        // send message using twilio
+                        // commenting for right now as it is throwing bad request error
+                        //sendMessage(mMessageText);
+
+                        /**
+                         * Adding Dummy data to check just sent message details
+                         * as Twilio api sending bad request error
+                         */
+                        SentMessageDetails sentMessageDetails = new SentMessageDetails();
+                        sentMessageDetails.setCurrentDateAndTime("10-12-2013");
+                        sentMessageDetails.setContactName("Ajay Kumar");
+                        mDatabaseHelper.addContact(sentMessageDetails);
                     } else {
                         Toast.makeText(getApplicationContext(), "Empty message unable to send message", Toast.LENGTH_LONG).show();
                     }
