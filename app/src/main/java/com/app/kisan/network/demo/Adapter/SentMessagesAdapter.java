@@ -24,7 +24,7 @@ public class SentMessagesAdapter extends RecyclerView.Adapter<SentMessagesAdapte
 
     @Override
     public MessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contact_list_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sent_sms_detail_item_card_view,parent,false);
         return new SentMessagesAdapter.MessageViewHolder(view);
     }
 
